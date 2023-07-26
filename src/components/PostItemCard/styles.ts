@@ -1,5 +1,5 @@
 import { COLOR } from 'commons/colors'
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import styled from 'styled-components'
 
 const Title = styled(Text)`
@@ -11,10 +11,7 @@ const Title = styled(Text)`
 const Container = styled(TouchableOpacity)`
   border-color: ${COLOR.blue};
   border-radius: 8px;
-  border-width: 2px;
-  height: auto;
-  margin-vertical: 16px;
-  margin-horizontal: 16px;
+  border-width: 1px;
   padding: 16px;
 `
 
@@ -23,4 +20,24 @@ const Body = styled(Text)`
   margin-top: 16px;
 `
 
-export { Title, Container, Body }
+const ActionsContainer = styled(View)`
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 12px;
+  padding-horizontal: 8px;
+  align-self: flex-end;
+`
+
+const TrashContainer = styled(View)`
+  margin-right: 16px;
+`
+
+const Content = styled(TouchableOpacity)`
+  height: auto;
+  margin-vertical: 8px;
+  margin-horizontal: 16px;
+  padding: 8px;
+`
+
+export { Title, Container, Body, ActionsContainer, Content, TrashContainer }

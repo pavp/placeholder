@@ -1,20 +1,23 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { HomeStackNavigatorParamList } from './types'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StatusBar } from 'react-native'
 import { MainNavigator } from './MainNavigator/MainNavigator'
-
-declare global {
-  namespace ReactNavigation {
-    interface RootParamList extends HomeStackNavigatorParamList {}
-  }
-}
+import { useFavoritePost } from 'hooks/useFavoritePost/useFavoritePost'
+import { useManageDeletedPost } from 'hooks/useManageDeletedPost/useManageDeletedPost'
 
 const queryClient = new QueryClient()
 
 export const AppMain = () => {
+  const { rehydrateFavoritePosts } = useFavoritePost('')
+  const { rehydrateDeletedPosts } = useManageDeletedPost('')
+
+  useEffect(() => {
+    rehydrateFavoritePosts()
+    rehydrateDeletedPosts()
+  }, [])
+
   return (
     <SafeAreaProvider>
       <NavigationContainer>

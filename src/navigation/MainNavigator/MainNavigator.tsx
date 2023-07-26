@@ -27,13 +27,19 @@ export const MainNavigator = () => {
         name="Detail"
         component={DetailScreen}
         options={{
-          title: '',
+          title: 'Post',
           headerTitleStyle: {
             color: COLOR.white,
           },
           headerBackTitleVisible: false,
-          headerTransparent: true,
+          headerTransparent: false,
           headerTintColor: COLOR.white,
+          headerStyle: {
+            backgroundColor: COLOR.darkGray,
+            elevation: 0,
+            shadowOpacity: 0,
+            borderBottomWidth: 0,
+          },
         }}
       />
     </Navigator>

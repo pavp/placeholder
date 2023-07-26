@@ -1,6 +1,11 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended", "@react-native-community"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "@react-native-community"
+  ],
   "plugins": ["prettier", "@typescript-eslint", "react-hooks", "react"],
   "rules": {
     "prettier/prettier": "error",
@@ -12,7 +17,10 @@
     "newline-before-return": "error",
     "no-bitwise": "error",
     "no-console": "warn",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "off",
+    "react-native/no-inline-styles": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off", // Optional: If you want to disable explicit return types on functions.
     "padding-line-between-statements": [
       "error",

@@ -13,9 +13,12 @@ interface IPostsVerticalCarousel {
 export const PostsVerticalCarousel = ({ data, isLoading }: IPostsVerticalCarousel) => {
   const { navigate } = useNavigation()
 
-  const handlePressItem = useCallback((id: number | string) => {
-    navigate('Detail', { id })
-  }, [])
+  const handlePressItem = useCallback(
+    (id: number | string, userId: number | string) => {
+      navigate('Detail', { id, userId })
+    },
+    [navigate]
+  )
 
   const renderItem = ({ item }: { item: Post }) => <PostItemCard item={item} handlePressItem={handlePressItem} />
 
@@ -30,6 +33,7 @@ export const PostsVerticalCarousel = ({ data, isLoading }: IPostsVerticalCarouse
           showsHorizontalScrollIndicator={false}
           keyExtractor={(item) => item.id.toString()}
           testID={'data-list'}
+          style={{ width: '100%' }}
         />
       )}
     </Container>

@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler'
 import React from 'react'
-import AppMain from 'navigation/AppMain'
+import { AppMain } from 'navigation/AppMain'
 
 const App = () => {
   return <AppMain />

@@ -14,7 +14,7 @@ export const MainNavigator = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Movies',
+          title: 'Posts',
           headerStyle: {
             backgroundColor: COLOR.darkGray,
           },

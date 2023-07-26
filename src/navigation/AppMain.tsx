@@ -14,7 +14,7 @@ declare global {
 
 const queryClient = new QueryClient()
 
-const AppMain = () => {
+export const AppMain = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
@@ -26,5 +26,3 @@ const AppMain = () => {
     </SafeAreaProvider>
   )
 }
-
-export default AppMain

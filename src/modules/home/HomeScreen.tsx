@@ -1,10 +1,14 @@
+import { useGetPosts } from 'hooks/useGetPosts/useGetPosts'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Container } from './styles'
+import { PostsVerticalCarousel } from 'components/PostsVerticalCarousel/PostsVerticalCarousel'
 
 export const HomeScreen = () => {
+  const { data, isLoading } = useGetPosts()
+
   return (
-    <View>
-      <Text>Homecreen</Text>
-    </View>
+    <Container edges={['bottom']}>
+      <PostsVerticalCarousel data={data} isLoading={isLoading} />
+    </Container>
   )
 }

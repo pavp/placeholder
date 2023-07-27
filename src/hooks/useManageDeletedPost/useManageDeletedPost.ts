@@ -1,7 +1,7 @@
 import { Post } from 'interfaces'
 import { useCallback, useMemo } from 'react'
 import { usePostStore } from 'store/usePostStore'
-import { KEYS_STORAGE, getData, storeData } from 'utils/AsyncStorageManager'
+import { KEYS_STORAGE, getData, storeData } from 'utils/asyncStorageManager'
 import { filterPostsByFavorites } from 'utils/filterPostsWithoutFavorites'
 
 export const useManageDeletedPost = (id: string | number) => {

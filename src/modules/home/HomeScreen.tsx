@@ -35,7 +35,7 @@ export const HomeScreen = () => {
   }, [navigation, data, favorites])
 
   return (
-    <Container edges={['bottom']}>
+    <Container edges={['bottom']} testID="home-container">
       <PostsVerticalCarousel data={data} isLoading={isLoading} />
     </Container>
   )

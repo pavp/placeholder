@@ -7,10 +7,10 @@ interface ICommentCard {
 }
 
 export const CommentCard = ({ item }: ICommentCard) => {
-  const { name, body, email } = item ?? {}
+  const { name, body, email } = item
 
   return (
-    <Container testID={'comment-onpress'}>
+    <Container testID={'comment-card'}>
       <Name>{name}</Name>
       <Body>{body}</Body>
       <Email>{email}</Email>

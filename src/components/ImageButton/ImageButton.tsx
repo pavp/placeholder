@@ -9,7 +9,7 @@ interface ImageButton {
 
 export const ImageButton = ({ handlePress, image, color }: ImageButton) => {
   return (
-    <TouchableOpacity onPress={handlePress} testID="wish-onpress">
+    <TouchableOpacity onPress={handlePress} testID="image-button-onpress">
       <Image source={image} style={{ height: 20, width: 20, tintColor: color }} resizeMode={'cover'} />
     </TouchableOpacity>
   )

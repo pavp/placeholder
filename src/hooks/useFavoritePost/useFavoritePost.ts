@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import { usePostStore } from 'store/usePostStore'
-import { KEYS_STORAGE, getData, storeData } from 'utils/AsyncStorageManager'
+import { KEYS_STORAGE, getData, storeData } from 'utils/asyncStorageManager'
 
 export const useFavoritePost = (id: string | number) => {
   const { favorites, setFavorites } = usePostStore((state) => state)

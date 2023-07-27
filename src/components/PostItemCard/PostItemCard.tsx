@@ -12,7 +12,7 @@ interface IPostItemCard {
 }
 
 export const PostItemCard = ({ item, handlePressItem }: IPostItemCard) => {
-  const { title, body, id } = item ?? {}
+  const { title, body, id } = item
   const { isFavoritePost, setFavoritePost, removeFavoritePost } = useFavoritePost(id)
   const { deletePost } = useDeletePost(id)
 

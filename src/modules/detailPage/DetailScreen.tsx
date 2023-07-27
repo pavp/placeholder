@@ -23,8 +23,9 @@ import {
 } from './styles'
 
 export const DetailScreen = () => {
-  const route = useRoute<DetailsScreenRouteProp>()
-  const { id, userId } = route.params
+  const {
+    params: { id, userId },
+  } = useRoute<DetailsScreenRouteProp>()
   const navigation = useNavigation()
   const { isFavoritePost, setFavoritePost, removeFavoritePost } = useFavoritePost(id)
 
@@ -61,7 +62,7 @@ export const DetailScreen = () => {
   }, [navigation, isFavoritePost])
 
   return (
-    <Container edges={['bottom']}>
+    <Container edges={['bottom']} testID="detail-container">
       {isLoading ? (
         <ActivityIndicator />
       ) : (
